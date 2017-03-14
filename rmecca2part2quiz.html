@@ -4,34 +4,40 @@
 <meta charset="utf-8">
 <title>FIMS Quiz</title>
 <link rel="stylesheet" type="text/css" href="part2.css">
+<script src="rmecca2part2.js"></script>
 </head>
 <div id="wholepage">
 <body>
 <h1><div id="questions">FIMS Quiz</div></h1>
 <h2><div id="questions">GOOD LUCK!</div></h2>
+
 <h2><div id="questions">1. What does MIT stand for?</div></h2>
-<p><div id="answers"><input type="radio" id="q1"> Michigan Institute of Technology </p>
-<p><input type="radio" id="q1"> Medium Intelligence Training </p>
-<p><input type="radio" id="q1"> Media, Information & Technoculture </p>
-<p><input type="radio" id="q1"> Minorities In Trouble </p>
+<div id="answers">
+<p><input type="radio" id="q1-1" name="q1"> Michigan Institute of Technology </p>
+<p><input type="radio" id="q1-2" name="q1"> Medium Intelligence Training </p>
+<p><input type="radio" id="q1-3" name="q1"> Media, Information & Technoculture </p>
+<p><input type="radio" id="q1-4" name="q1"> Minorities In Trouble </p>
 </div>
-<button>Submit Your Answer to Question 1</button>
+<div id="q1-result"></div>
+<button id="q1-button" onclick="submitQuestion(1, evalQuestion1);">Submit Your Answer to Question 1</button>
 
 <h2><div id="questions">2. A panopticon is:</div></h2>
-<p><div id="answers"><input type="checkbox" id="q2"> A type of telescope</p>
-<p><input type="checkbox" id="q2"> A prison system</p>
-<p><input type="checkbox" id="q2"> A pancake with a hidden video camera</p>
-<p><input type="checkbox" id="q2"> A symbol for "surveillance society"</p>
+<div id="answers">
+<p><input type="checkbox" id="q2-1"> A type of telescope</p>
+<p><input type="checkbox" id="q2-2"> A prison system</p>
+<p><input type="checkbox" id="q2-3"> A pancake with a hidden video camera</p>
+<p><input type="checkbox" id="q2-4"> A symbol for "surveillance society"</p>
 </div>
-<button>Submit Your Answer to Question 2</button>
+<div id="q2-result"></div>
+<button id="q2-button" disabled onclick="submitQuestion(2, evalQuestion2);">Submit Your Answer to Question 2</button>
 
 <h2><div id="questions">3. Where did the term "The medium is the message" come from?</div></h2>
 <p><input text="answer" id="q3"></p>
-<button><div id="writeText">Submit Your Answer to Question 3</div></button>
+<div id="q3-result"></div>
+<button id="q3-button" disabled onclick="submitQuestion(3, evalQuestion3);"><div id="writeText">Submit Your Answer to Question 3</div></button>
 
-<div id="questions"><p>Maximum possible score:</p>
-<p>Your score:</p></div>
-<button> Try Again?</button>
-</body>
+<div id="result"></div>
+<button id="reset" disabled onclick="window.location.reload();">Try Again?</button>
 </div>
+</body>
 </html>
