@@ -1,0 +1,22 @@
+div#wholepage {
+	background-color: orange;
+	text-align:center;
+	
+}
+
+div#questions {
+	color:blue;
+	font-family:"Impact", fantasy;
+	
+}
+
+div#writeText {
+	
+	
+}
+
+div#answers {
+	color:darkgreen;
+	font-weight:bold;
+	
+}
